@@ -15,7 +15,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("test-react-and-vercel-deploy-ej2xyzy1b.vercel.app/userInfo", {
+    const response = await fetch("/userInfo", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -28,7 +28,7 @@ function App() {
   };
 
   const getUsers = async () => {
-    const response = await fetch("test-react-and-vercel-deploy-ej2xyzy1b.vercel.app/userInfo", {
+    const response = await fetch("/userInfo", {
       method: "GET",
     });
     const data = await response.json();
